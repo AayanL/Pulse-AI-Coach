@@ -15,7 +15,7 @@ router = APIRouter()
 @router.get("/")
 async def read_root():
     try:
-        return FileResponse("index.html")
+        return FileResponse("static/index.html")
     except Exception as e:
         raise AppException(f"Failed to load main page: {str(e)}", 500)
     
